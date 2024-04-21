@@ -1,0 +1,72 @@
+[
+  {
+    "header": "Service 1",
+    "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    "desc": "This is a test service",
+    "price": 100,
+    "hours": 10
+  },
+  {
+    "header": "Service 2",
+    "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    "desc": "This is a test service",
+    "price": 200,
+    "hours": 20
+  },
+  {
+    "header": "Service 3",
+    "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    "desc": "This is a test service",
+    "price": 300,
+    "hours": 30
+  },
+  {
+    "header": "Service 4",
+    "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    "desc": "This is a test service",
+    "price": 400,
+    "hours": 40
+  },
+  {
+    "header": "Service 5",
+    "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    "desc": "This is a test service",
+    "price": 500,
+    "hours": 50
+  },
+    {
+        "header": "Service 6",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "desc": "This is a test service",
+        "price": 600,
+        "hours": 60
+    },
+    {
+        "header": "Service 7",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "desc": "This is a test service",
+        "price": 700,
+        "hours": 70
+    },
+    {
+        "header": "Service 8",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "desc": "This is a test service",
+        "price": 800,
+        "hours": 80
+    },
+    {
+        "header": "Service 9",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "desc": "This is a test service",
+        "price": 900,
+        "hours": 90
+    },
+    {
+        "header": "Service 10",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "desc": "This is a test service",
+        "price": 1000,
+        "hours": 100
+    }
+]
