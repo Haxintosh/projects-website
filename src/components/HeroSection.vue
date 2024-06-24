@@ -13,8 +13,11 @@ onMounted(() => {
 
   const heroText = document.querySelector('.heroText');
   const heroTextRect = heroText.getBoundingClientRect();
-  heroText.style.top = `${window.innerHeight / 2}px`;
-  heroText.style.left = `${window.innerWidth / 2}px`;
+  console.log(heroTextRect)
+  heroText.style.top = `${(window.innerHeight / 2)-(heroTextRect.height/2)}px`;
+  heroText.style.left = `${(window.innerWidth / 2)-(heroTextRect.width/2)}px`;
+  console.log(heroText.style.top, heroText.style.left)
+
 
 
   const mainCanvas = document.getElementById('heroCanvas');
@@ -79,6 +82,12 @@ onMounted(() => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     // cssIsStupid.style.height = `${window.innerHeight}px`;
     // cssIsStupid.style.width = `${window.innerWidth}px`;
+
+    const heroTextRect = heroText.getBoundingClientRect();
+    console.log(heroTextRect)
+    heroText.style.top = `${(window.innerHeight / 2)-(heroTextRect.height/2)}px`;
+    heroText.style.left = `${(window.innerWidth / 2)-(heroTextRect.width/2)}px`;
+    console.log(heroText.style.top, heroText.style.left)
   }
 });
 </script>
@@ -121,7 +130,6 @@ onMounted(() => {
   position: absolute; /*why isn't this in the middle*/
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   font: 2em 'notoSans', sans-serif;
   color: #ffffff;

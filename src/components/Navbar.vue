@@ -41,6 +41,7 @@ export default {
   position: fixed;
   height: 50px;
   font: 1em 'notoSans', sans-serif;
+  z-index:10;
 }
 
 .mainNavContainer {

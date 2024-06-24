@@ -3,13 +3,15 @@ import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
 import HeroSection from "./HeroSection.vue";
 import MissionSection from "./MissionSection.vue";
+import ServicesSection from "./ServicesSection.vue";
 export default {
   name: 'App',
   components: {
     Navbar,
     Footer,
     HeroSection,
-    MissionSection
+    MissionSection,
+    ServicesSection
   },
   data() {
     return {
@@ -32,6 +34,8 @@ export default {
 
   <MissionSection />
 
+  <ServicesSection />
+
   <Footer :companyName="companyName" />
 </template>
 
@@ -51,11 +55,5 @@ html{
   margin:0;
   width:100%;
   overflow:hidden;
-}
-#app{
-  width:100%;
-  position:absolute;
-  top:0;
-  left:0;
 }
 </style>

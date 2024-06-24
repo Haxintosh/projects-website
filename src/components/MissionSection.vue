@@ -7,7 +7,7 @@
   <div class="mainMissionContainer">
     <div class="missionContainer">
       <div class="itemTag">Our Mission</div>
-      <h1 class="missionHeader">Empowering wellness</h1>
+      <h1 class="missionHeader">Empowering Engineering</h1>
       <div class="missionText">Here, we are committed to empowering individuals on their journey to holistic well-being. Through our carefully curated range of products and services, we aim to nourish the mind, body, and soul, helping you achieve optimal health and vitality.</div>
     </div>
     <div class="valueContainer">
@@ -49,6 +49,7 @@
   flex-direction:column;
   width: 50%;
   align-items:flex-start;
+  max-width: 700px;
 }
 .valueContainer{
   flex: 1;
@@ -58,6 +59,7 @@
   gap: 10px;
   width: fit-content;
   align-items:flex-start;
+  max-width:700px;
 }
 .missionHeader{
   font-size: 3em;
