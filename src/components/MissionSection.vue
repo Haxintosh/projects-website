@@ -12,12 +12,12 @@
     </div>
     <div class="valueContainer">
       <div class="itemTag">Our Values</div>
-      <h3 class="valueSubheader">Mindfulness</h3>
-      <div class="valueText">We believe in the power of mindfulness and its ability to transform lives.</div>
-      <h3 class="valueSubheader">Sustainability</h3>
-      <div class="valueText">We are committed to sustainability and strive to minimize our environmental impact.</div>
-      <h3 class="valueSubheader">Integrity</h3>
-      <div class="valueText">We strive to operate with the highest level of integrity, always putting our customers first.</div>
+      <h3 class="valueSubheader">Holistic Approach</h3>
+      <div class="valueText">We believe in nourishing the mind, body, and spirit for lasting well-being.</div>
+      <h3 class="valueSubheader">Natural Ingredients</h3>
+      <div class="valueText">Our products are crafted with the finest organic and sustainable materials.</div>
+      <h3 class="valueSubheader">Mindful Living</h3>
+      <div class="valueText">We inspire and empower our community to embrace a balanced, intentional lifestyle.</div>
     </div>
   </div>
 </div>
