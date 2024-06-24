@@ -41,7 +41,7 @@ onMounted(() => {
   camera.lookAt(86.72, -1341.22, -9909.26);
 
   const loader = new GLTFLoader();
-  loader.load('/src/assets/tree.glb',
+  loader.load('tree.glb',
       (model) => {
         scene.add(model.scene);
         mainModel = model;
