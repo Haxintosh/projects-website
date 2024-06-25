@@ -4,6 +4,7 @@ import Footer from './Footer.vue';
 import HeroSection from "./HeroSection.vue";
 import MissionSection from "./MissionSection.vue";
 import ServicesSection from "./ServicesSection.vue";
+import ReviewCards from "./ReviewCards.vue";
 export default {
   name: 'App',
   components: {
@@ -11,7 +12,8 @@ export default {
     Footer,
     HeroSection,
     MissionSection,
-    ServicesSection
+    ServicesSection,
+    ReviewCards
   },
   data() {
     return {
@@ -36,6 +38,7 @@ export default {
 
   <ServicesSection />
 
+  <ReviewCards img="../assets/review1.jpg" name="John Doe" review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui." rating="4"></ReviewCards>
   <Footer :companyName="companyName" />
 </template>
 
