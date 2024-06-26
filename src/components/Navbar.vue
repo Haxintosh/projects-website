@@ -39,7 +39,7 @@ export default {
   left: 0;
   width: 100%;
   position: fixed;
-  height: 50px;
+  height: fit-content;
   font: 1em 'notoSans', sans-serif;
   z-index:10;
 }
