@@ -6,6 +6,7 @@ import MissionSection from "./MissionSection.vue";
 import ServicesSection from "./ServicesSection.vue";
 import ReviewCards from "./ReviewCards.vue";
 import ReviewSection from "./ReviewSection.vue";
+import OpeningHoursSection from "./OpeningHoursSection.vue";
 
 export default {
   name: 'App',
@@ -16,7 +17,8 @@ export default {
     MissionSection,
     ServicesSection,
     ReviewCards,
-    ReviewSection
+    ReviewSection,
+    OpeningHoursSection
   },
   data() {
     return {
@@ -104,6 +106,8 @@ export default {
   <ServicesSection />
 
   <ReviewSection :reviews="reviews"/>
+
+  <OpeningHoursSection />
 
   <Footer :companyName="companyName" />
 </template>

@@ -60,6 +60,7 @@ export default {
 .subHeaderText{
   font-size: 1.1em;
   margin: 10px;
+  margin-top:0;
   color:#71717a;
 }
 
