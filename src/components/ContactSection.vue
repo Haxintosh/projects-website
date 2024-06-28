@@ -1,13 +1,20 @@
 <script>
 import {onMounted} from "vue";
 
+import 'buefy/dist/buefy.css'
+import {Loading} from "buefy";
+
 export default {
   name: 'ContactSection',
   data() {
     return {
       show: false,
-      originAddress: ''
+      originAddress: '',
+      isLoading:true,
     }
+  },
+  components: {
+    Loading
   },
   methods: {
     toggle() {
@@ -21,8 +28,8 @@ export default {
       iframe.width = 600;
       iframe.height = 450;
       iframe.style.width="100%";
-      document.querySelector('.embedIframe').innerHTML = '';
-      document.querySelector('.embedIframe').appendChild(iframe);
+      document.querySelector('.GMAPS').innerHTML = '';
+      document.querySelector('.GMAPS').appendChild(iframe);
     }
   },
   setup(){
@@ -49,13 +56,13 @@ const directionsEmbedParams = {
 };
 
 function init(){
-  document.querySelector('.embedIframe').innerHTML = '';
+  document.querySelector('.GMAPS').innerHTML = '';
   const iframe = document.createElement('iframe');
   iframe.src=`${locationEmbedEndpoint}?${encodeQueryData(locationEmbedParams)}`;
   iframe.width = 600;
   iframe.height = 450;
   iframe.style.width="100%";
-  document.querySelector('.embedIframe').appendChild(iframe);
+  document.querySelector('.GMAPS').appendChild(iframe);
 }
 
 function encodeQueryData(data) {
@@ -74,7 +81,12 @@ function encodeQueryData(data) {
       <div class="embedMap">
         <h1 class="subMainHeader">Find us</h1>
         <p class="subSubMainHeaderHeaderText">Visit us or get directions to our location</p>
-        <div class="embedIframe"></div>
+        <div class="embedIframe">
+          <div class="loading">
+            <b-loading v-model="isLoading" :can-cancel="false" :is-full-page="false" class="loadingOverlay"></b-loading>
+          </div>
+          <div class="GMAPS"></div>
+        </div>
         <div class="addressInputHeader">Enter your address</div>
         <div class="addressInput">
           <input type="text" v-model="originAddress" placeholder="333 Rue de la Commune" class="addressInputBox">
@@ -129,12 +141,14 @@ function encodeQueryData(data) {
   justify-content: center;
   gap: 10px;
   width:50%;
+  position: relative;
 }
 .embedIframe{
   width: 100%;
   height: 450px;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 .addressInput{
   display: flex;
@@ -207,5 +221,30 @@ button{
   font-size: 0.9em;
   font-weight: normal;
   color: #000000;
+}
+.loadingOverlay{
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading{
+  width: 100%;
+  height: 450px;
+  z-index: -1;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.GMAPS{
+  width: 100%;
+  height: 450px;
+  z-index: 2;
+  position: relative;
+  border-radius: 10px;
 }
 </style>
