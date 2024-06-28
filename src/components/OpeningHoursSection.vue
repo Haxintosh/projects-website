@@ -64,6 +64,7 @@ export default {
   align-items: center;
   justify-content: center;
   background-color:#f4f4f5;
+  padding-bottom:30px;
 }
 
 .hoursContainer{
