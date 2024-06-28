@@ -18,7 +18,7 @@ export default {
 
 <template>
   <div class="servicesContainer">
-    <h1 class="mainHeader">Our Projects</h1>
+    <h1 class="mainHeader">Our Products</h1>
     <p class="subHeaderText">PLACEHOLDER</p>
     <div class="products">
       <div class="product">
@@ -116,5 +116,17 @@ export default {
   border-radius: 8px;
   margin-top: 20px;
   cursor: pointer;
+}
+.allProductsButton{
+  font-size: 1em;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  width:100%;
 }
 </style>

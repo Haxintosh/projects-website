@@ -71,21 +71,25 @@ function encodeQueryData(data) {
       <h1 class="mainHeader">Contact Us</h1>
       <p class="subHeaderText">We are here to help</p>
     <div class="centerContainer">
+      <div class="embedMap">
+        <h1 class="subMainHeader">Find us</h1>
+        <p class="subSubMainHeaderHeaderText">Visit us or get directions to our location</p>
+        <div class="embedIframe"></div>
+        <div class="addressInputHeader">Enter your address</div>
+        <div class="addressInput">
+          <input type="text" v-model="originAddress" placeholder="333 Rue de la Commune" class="addressInputBox">
+          <button :class="{ buttonBlue: originAddress }" @click="getDirections">Get Directions</button>
+        </div>
+      </div>
       <div class="contactText">
+        <h1 class="subMainHeader">Get in touch</h1>
+        <p class="subSubMainHeaderHeaderText">Contact us for any questions or inquiries</p>
         <p class="subSubHeaderText">Our address:</p>
         <p class="contactInfo">PLACEHOLDER</p>
         <p class="subSubHeaderText">Phone:</p>
         <p class="contactInfo">PLACEHOLDER</p>
         <p class="subSubHeaderText">Email:</p>
         <p class="contactInfo">PLACEHOLDER</p>
-      </div>
-      <div class="embedMap">
-        <div class="addressInput">
-          <input type="text" v-model="originAddress" placeholder="Enter your address" class="addressInputBox">
-          <button @click="getDirections">Get Directions</button>
-        </div>
-        <div class="embedIframe">
-        </div>
       </div>
     </div>
   </div>
@@ -106,7 +110,7 @@ function encodeQueryData(data) {
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   max-width: 1400px;
   width: 100%;
 }
@@ -121,7 +125,7 @@ function encodeQueryData(data) {
 .embedMap{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 10px;
   width:50%;
@@ -136,7 +140,7 @@ function encodeQueryData(data) {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 10px;
   margin-bottom: 10px;
   width:100%;
@@ -157,30 +161,51 @@ function encodeQueryData(data) {
   font-size: 1.5em;
   font-weight: bold;
   color: #000000;
+  margin-bottom:-20px;
 }
 .addressInputBox{
-  width: 60%;
+  width: 65%;
   height: 40px;
   border-radius: 5px;
-  border: 4px solid #71717a;
+  border: 2px solid #e4e4e7;
   padding: 5px;
   transition: all 0.3s;
 }
 .addressInputBox:focus{
   outline: none;
-  border: 4px solid #007aff;
+  border: 2px solid #007aff;
 }
 .addressInputBox:hover{
-  border: 4px solid #007aff;
+  border: 2px solid #007aff;
 }
 button{
-  background-color: #007aff;
+  background-color: #000000;
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 40px 10px 40px;
   font-size: 1em;
+  width: 35%;
   cursor: pointer;
   transition: all 0.3s;
+}
+.buttonBlue {
+  background-color: #007aff;
+}
+
+.subSubMainHeaderHeaderText{
+  font-size: 1.1em;
+  color: #71717a;
+}
+.subMainHeader{
+  font-size: 2em;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom:-20px;
+}
+.addressInputHeader{
+  font-size: 0.9em;
+  font-weight: normal;
+  color: #000000;
 }
 </style>

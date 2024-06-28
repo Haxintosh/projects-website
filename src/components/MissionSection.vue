@@ -4,6 +4,8 @@
 
 <template>
 <div class="mainMissionComponentContainer">
+  <h1 class="sectionHeader">About us</h1>
+  <p class="subHeaderText">Discover who we are</p>
   <div class="mainMissionContainer">
     <div class="missionContainer">
       <div class="itemTag">Our Mission</div>
@@ -31,15 +33,16 @@
   font: 1em 'notoSans', sans-serif;
   display:flex;
   justify-content:center;
-  align-items:flex-start;
+  align-items:center;
+  flex-direction:column;
 }
 .mainMissionContainer{
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: flex-start;
-  padding: 3em;
-  margin:3em;
+  padding: 30px;
+  margin:20px;
   gap: 20px;
 }
 .missionContainer{
@@ -60,6 +63,17 @@
   width: fit-content;
   align-items:flex-start;
   max-width:700px;
+}
+.sectionHeader{
+  font-size: 3em;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom:-5px;
+}
+.subHeaderText{
+  font-size: 1.1em;
+  margin: 10px;
+  color:#71717a;
 }
 .missionHeader{
   font-size: 3em;

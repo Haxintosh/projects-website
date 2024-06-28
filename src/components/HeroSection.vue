@@ -7,9 +7,6 @@ import {GLTFLoader} from "three/addons";
 import {OrbitControls} from "three/addons";
 
 onMounted(() => {
-  // const cssIsStupid = document.getElementById('fakeScrollDiv');
-  // cssIsStupid.style.height = `${window.innerHeight}px`;
-  // cssIsStupid.style.width = `${window.innerWidth}px`;
 
   const heroText = document.querySelector('.heroText');
   const heroTextRect = heroText.getBoundingClientRect();
@@ -80,8 +77,6 @@ onMounted(() => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    // cssIsStupid.style.height = `${window.innerHeight}px`;
-    // cssIsStupid.style.width = `${window.innerWidth}px`;
 
     const heroTextRect = heroText.getBoundingClientRect();
     console.log(heroTextRect)
@@ -97,13 +92,12 @@ onMounted(() => {
     <div class="heroContainer">
       <canvas class="heroCanvas" id="heroCanvas"></canvas>
       <div class="heroText">
-        <h1>Main Header</h1>
+        <h1 class="mainHeader">Main Header</h1>
   <!--      elevate ur zen-->
-        <p>Sub Header</p>
+        <p class="subHeader">Sub Header</p>
         <button class="services">See our services</button>
       </div>
     </div>
-<!--    <div id="fakeScrollDiv"></div>-->
   </div>
 
 </template>
@@ -127,11 +121,23 @@ onMounted(() => {
 }
 
 .heroText{
-  position: absolute; /*why isn't this in the middle*/
+  position: absolute;
   top: 50%;
   left: 50%;
   text-align: center;
   font: 2em 'notoSans', sans-serif;
+  color: #ffffff;
+}
+
+.mainHeader{
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom:-20px;
+}
+
+.subHeader{
+  font-size: 1.5em;
   color: #ffffff;
 }
 
