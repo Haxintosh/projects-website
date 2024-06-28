@@ -3,6 +3,8 @@ import {onMounted} from "vue";
 
 import 'buefy/dist/buefy.css'
 import {Loading} from "buefy";
+import {ToastProgrammatic as Toast} from "buefy";
+import toast from "buefy/src/components/toast/index.js";
 
 export default {
   name: 'ContactSection',
@@ -14,13 +16,18 @@ export default {
     }
   },
   components: {
-    Loading
+    Loading,
+    Toast
   },
   methods: {
     toggle() {
       this.show = !this.show
     },
     getDirections() {
+      if (!this.originAddress) {
+        this.errorToast();
+        return;
+      }
       directionsEmbedParams.origin = this.originAddress.replace(' ', '+');
       const url = `${directionsEmbedEndpoint}?${encodeQueryData(directionsEmbedParams)}`;
       const iframe = document.createElement('iframe');
@@ -28,8 +35,15 @@ export default {
       iframe.width = 600;
       iframe.height = 450;
       iframe.style.width="100%";
+      iframe.onerror = this.errorToast;
       document.querySelector('.GMAPS').innerHTML = '';
       document.querySelector('.GMAPS').appendChild(iframe);
+    },
+    errorToast(){
+      this.$buefy.toast.open({
+        message: 'Invalid address',
+        type: 'is-danger'
+      });
     }
   },
   setup(){
@@ -62,6 +76,7 @@ function init(){
   iframe.width = 600;
   iframe.height = 450;
   iframe.style.width="100%";
+  iframe.onerror = this.errorToast;
   document.querySelector('.GMAPS').appendChild(iframe);
 }
 
