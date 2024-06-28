@@ -76,8 +76,15 @@ function init(){
   iframe.width = 600;
   iframe.height = 450;
   iframe.style.width="100%";
-  iframe.onerror = this.errorToast;
+  iframe.onerror = errorToast;
   document.querySelector('.GMAPS').appendChild(iframe);
+}
+
+function errorToast() {
+  this.$buefy.toast.open({
+    message: 'Invalid address',
+    type: 'is-danger'
+  });
 }
 
 function encodeQueryData(data) {
